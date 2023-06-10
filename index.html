@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- QLTS  -->
+
+    <head>
+        <title>Quản lý tuyển sinh</title>
+    </head>
+
+    <body>
+        <h1>Quản lý tuyển sinh</h1>
+
+        <label for="diemChuan">Điểm chuẩn:</label>
+        <input type="number" id="diemChuan"><br>
+
+        <label for="diemMon1">Điểm môn 1:</label>
+        <input type="number" id="diemMon1"><br>
+
+        <label for="diemMon2">Điểm môn 2:</label>
+        <input type="number" id="diemMon2"><br>
+
+        <label for="diemMon3">Điểm môn 3:</label>
+        <input type="number" id="diemMon3"><br>
+
+        <label for="khuVuc">Khu vực:</label>
+        <select id="khuVuc">
+            <option value="A">Khu vực A</option>
+            <option value="B">Khu vực B</option>
+            <option value="C">Khu vực C</option>
+            <option value="X">Không thuộc khu vực ưu tiên</option>
+        </select><br>
+
+        <label for="doiTuong">Đối tượng dự thi:</label>
+        <select id="doiTuong">
+            <option value="1">Đối tượng 1</option>
+            <option value="2">Đối tượng 2</option>
+            <option value="3">Đối tượng 3</option>
+            <option value="0">Không thuộc đối tượng ưu tiên</option>
+        </select><br>
+
+        <button onclick="tinhDiem()">Tính điểm</button>
+
+        <p id="ketQua"></p>
+
+
+
+
+
+        <br>
+        <br>
+        <br>
+
+
+        <!-- TINH TIEN DIEN  -->
+
+        <head>
+            <title>Tính tiền điện</title>
+        </head>
+        <h1>Tính tiền điện</h1>
+        <form>
+            <label for="name">Tên:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="consumption">Số Kw:</label>
+            <input type="number" id="consumption" required><br>
+
+            <input type="submit" value="Tính">
+        </form>
+
+        <div id="result"></div>
+
+
+        <br>
+        <br>
+        <br>
+
+        <!-- TINH THUE THU NHAP CA NHAN -->
+
+        <head>
+            <title>Tính thuế thu nhập cá nhân</title>
+
+        </head>
+
+        <h1>Tính thuế thu nhập cá nhân</h1>
+        <form id="taxForm">
+            <label for="fullName">Họ và tên:</label>
+            <input type="text" id="fullName" required><br>
+
+            <label for="income">Tổng thu nhập năm:</label>
+            <input type="number" id="income" required><br>
+
+            <label for="dependents">Số người phụ thuộc:</label>
+            <input type="number" id="dependents" required><br>
+
+            <button type="submit">Tính thuế</button>
+        </form>
+
+        <div id="result" style="display: none;">
+            <h2>Kết quả:</h2>
+            <p id="taxAmount"></p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+
+        <!-- TINH TIEN CAP  -->
+
+        <head>
+            <title>Tính tiền cáp</title>
+        </head>
+
+        <body>
+            <h1>Tính tiền cáp</h1>
+
+            <label for="customerType">Loại khách hàng:</label>
+            <select id="customerType" onchange="handleCustomerTypeChange()">
+                <option value="residential">Nhà dân</option>
+                <option value="business">Doanh nghiệp</option>
+            </select>
+            <br><br>
+
+            <label for="connectionCount">Số kết nối:</label>
+            <input type="number" id="connectionCount">
+            <br><br>
+
+            <label for="premiumChannels">Số kênh cao cấp:</label>
+            <input type="number" id="premiumChannels">
+            <br><br>
+
+            <button onclick="calculateBill()">Tính tiền</button>
+
+            <h2>Kết quả:</h2>
+            <p id="result"></p>
+        </body>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <script src="./js/main.js"> </script>
+    </body>
+
+</html>
